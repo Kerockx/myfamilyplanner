@@ -1,0 +1,200 @@
+2023-11-09 09:31 +01:00: (node:6692) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:31 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:31 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:31 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:31 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:31 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:31 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:31 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:31 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:31 +01:00:   errno: -4091,
+2023-11-09 09:31 +01:00:   syscall: 'listen',
+2023-11-09 09:31 +01:00:   address: '::',
+2023-11-09 09:31 +01:00:   port: 8080
+2023-11-09 09:31 +01:00: }
+2023-11-09 09:31 +01:00: (node:28588) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:31 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:31 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:31 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:31 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:31 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:31 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:31 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:31 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:31 +01:00:   errno: -4091,
+2023-11-09 09:31 +01:00:   syscall: 'listen',
+2023-11-09 09:31 +01:00:   address: '::',
+2023-11-09 09:31 +01:00:   port: 8080
+2023-11-09 09:31 +01:00: }
+2023-11-09 09:31 +01:00: (node:27548) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:31 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:31 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:31 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:31 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:31 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:31 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:31 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:31 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:31 +01:00:   errno: -4091,
+2023-11-09 09:31 +01:00:   syscall: 'listen',
+2023-11-09 09:31 +01:00:   address: '::',
+2023-11-09 09:31 +01:00:   port: 8080
+2023-11-09 09:31 +01:00: }
+2023-11-09 09:31 +01:00: (node:20644) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:31 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:31 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:31 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:31 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:31 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:31 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:31 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:31 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:31 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:31 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:31 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:31 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:31 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:31 +01:00:   errno: -4091,
+2023-11-09 09:31 +01:00:   syscall: 'listen',
+2023-11-09 09:31 +01:00:   address: '::',
+2023-11-09 09:31 +01:00:   port: 8080
+2023-11-09 09:31 +01:00: }
+2023-11-09 09:32 +01:00: (node:17784) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:32 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:32 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:32 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:32 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:32 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:32 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:32 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:32 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:32 +01:00:   errno: -4091,
+2023-11-09 09:32 +01:00:   syscall: 'listen',
+2023-11-09 09:32 +01:00:   address: '::',
+2023-11-09 09:32 +01:00:   port: 8080
+2023-11-09 09:32 +01:00: }
+2023-11-09 09:32 +01:00: (node:14536) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:32 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:32 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:32 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:32 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:32 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:32 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:32 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:32 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:32 +01:00:   errno: -4091,
+2023-11-09 09:32 +01:00:   syscall: 'listen',
+2023-11-09 09:32 +01:00:   address: '::',
+2023-11-09 09:32 +01:00:   port: 8080
+2023-11-09 09:32 +01:00: }
+2023-11-09 09:32 +01:00: (node:26532) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:32 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:32 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:32 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:32 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:32 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:32 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:32 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:32 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:32 +01:00:   errno: -4091,
+2023-11-09 09:32 +01:00:   syscall: 'listen',
+2023-11-09 09:32 +01:00:   address: '::',
+2023-11-09 09:32 +01:00:   port: 8080
+2023-11-09 09:32 +01:00: }
+2023-11-09 09:32 +01:00: (node:18472) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+2023-11-09 09:32 +01:00: (Use `node --trace-deprecation ...` to show where the warning was created)
+2023-11-09 09:32 +01:00: Error: listen EADDRINUSE: address already in use :::8080
+2023-11-09 09:32 +01:00:     at Server.setupListenHandle [as _listen2] (node:net:1372:16)
+2023-11-09 09:32 +01:00:     at listenInCluster (node:net:1420:12)
+2023-11-09 09:32 +01:00:     at Server.listen (node:net:1508:7)
+2023-11-09 09:32 +01:00:     at Function.listen (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\node_modules\express\lib\application.js:635:24)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (D:\Entwicklung\BauPlanungsTool-WebEingabe\trunk\server\server.js:91:5)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Object.<anonymous> (C:\Users\torsten.soens\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2023-11-09 09:32 +01:00:     at Module._compile (node:internal/modules/cjs/loader:1105:14)
+2023-11-09 09:32 +01:00:     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+2023-11-09 09:32 +01:00:     at Module.load (node:internal/modules/cjs/loader:981:32)
+2023-11-09 09:32 +01:00:     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+2023-11-09 09:32 +01:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+2023-11-09 09:32 +01:00:     at node:internal/main/run_main_module:17:47 {
+2023-11-09 09:32 +01:00:   code: 'EADDRINUSE',
+2023-11-09 09:32 +01:00:   errno: -4091,
+2023-11-09 09:32 +01:00:   syscall: 'listen',
+2023-11-09 09:32 +01:00:   address: '::',
+2023-11-09 09:32 +01:00:   port: 8080
+2023-11-09 09:32 +01:00: }

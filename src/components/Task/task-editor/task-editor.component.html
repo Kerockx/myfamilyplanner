@@ -1,0 +1,41 @@
+
+<div [formGroup]="form">
+<input type="text" formControlName='txt_name'>
+<select formControlName='nID_task_category'>
+    @for (obj of taskCategoryDefs; track obj.ID) {
+    <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+    }
+</select>
+@if(currentTaskCategoryDefID){
+    <select formControlName='nID_task_category_sub'>
+        @for (obj of filteredTaskCategorySubDefs; track obj.ID) {
+        <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+        }
+    </select>
+}
+@if(currentTaskCategorySubDefID){
+<select formControlName='nID_task_category_sub_sub'>
+    @for (obj of filteredTaskCategorySubSubDefs; track obj.ID) {
+    <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+    }
+</select>
+}
+@if(currentTaskCategorySubSubDefID){
+<input type="text" formControlName='n_duration'>
+}
+</div>
+    <div [formGroup]="familyMemberForm">
+        @for (obj of familyMemberFormArray.controls; track i; let i = $index) {
+        <label formArrayName="familyMembers">
+            <input type="checkbox" [formControlName]="i" (change)="changeFamilyMemberValue($event,i)">
+            {{familyMembers()![i].txt_name}}
+            </label>
+        }
+    </div>
+<div>
+    <button type="button" (click)="submit()">Speichern</button>
+    @if (currentObject().ID) {
+        <button type="button" (click)="cancel()">Abbrechen</button>
+    }
+</div>
+

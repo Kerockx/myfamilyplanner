@@ -1,0 +1,32 @@
+<table>
+    <thead> 
+        <tr>     
+            <th>Name</th>
+            <th>Kategorie</th>
+            <th>Unterkategorie</th>
+            <th>Aufgabe</th>
+            <th>Dauer</th>
+            <th>Familienmitglieder</th>
+        </tr> 
+    </thead>
+    <tbody>
+        @for (obj of objects(); track obj.ID) {
+            <tr>
+                <td>{{obj.txt_name}}</td>
+                <td>{{obj.def_task_category_sub_sub.def_task_category_sub.def_task_category.txt_name}}</td>
+                <td>{{obj.def_task_category_sub_sub.def_task_category_sub.txt_name}}</td>
+                <td>{{obj.def_task_category_sub_sub.txt_name}}</td>
+                <td>{{obj.n_duration}}</td>
+                <td>
+                    @if(obj.tabz_tab_tasks_tab_family_members){
+                        @for (member of obj.tabz_tab_tasks_tab_family_members; track member.ID; ; let i = $index) {       
+                            {{member.tab_family_member.txt_name}} <br>
+                        }
+                    }
+                </td>
+                <td><button (click)="update(obj)">Bearbeiten</button></td>
+                <td><button (click)="delete(obj)">Löschen</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

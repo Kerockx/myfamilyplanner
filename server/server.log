@@ -1,0 +1,920 @@
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:31 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:31 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:31 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:31 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:31 +01:00: /api/tabGleise
+2023-11-09 09:31 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefBST
+2023-11-09 09:31 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:31 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:31 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:31 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:31 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:31 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:31 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:31 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:31 +01:00: /api/tabBundeslaender
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:31 +01:00: /api/tabProjekte
+2023-11-09 09:31 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:31 +01:00: /api/tabRollen
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:31 +01:00: /api/tabLeistungstypen
+2023-11-09 09:31 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:31 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:31 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:31 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:31 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:31 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:31 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:31 +01:00: /api/tabGleise
+2023-11-09 09:31 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefBST
+2023-11-09 09:31 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:31 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:31 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:31 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:31 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:31 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:31 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:31 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:31 +01:00: /api/tabBundeslaender
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:31 +01:00: /api/tabProjekte
+2023-11-09 09:31 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:31 +01:00: /api/tabRollen
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:31 +01:00: /api/tabLeistungstypen
+2023-11-09 09:31 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:31 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:31 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:31 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:31 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:31 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:31 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:31 +01:00: /api/tabGleise
+2023-11-09 09:31 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefBST
+2023-11-09 09:31 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:31 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:31 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:31 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:31 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:31 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:31 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:31 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:31 +01:00: /api/tabBundeslaender
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:31 +01:00: /api/tabProjekte
+2023-11-09 09:31 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:31 +01:00: /api/tabRollen
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:31 +01:00: /api/tabLeistungstypen
+2023-11-09 09:31 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:31 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:31 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:31 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:31 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:31 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:31 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:31 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:31 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:31 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:31 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:31 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:31 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:31 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:31 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:31 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:31 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:31 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:31 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:31 +01:00: /api/tabGleise
+2023-11-09 09:31 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefBST
+2023-11-09 09:31 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:31 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:31 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:31 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:31 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:31 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:31 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:31 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:31 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:31 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:31 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:31 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:31 +01:00: /api/tabBundeslaender
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:31 +01:00: /api/tabProjekte
+2023-11-09 09:31 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:31 +01:00: /api/tabRollen
+2023-11-09 09:31 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:31 +01:00: /api/tabUser
+2023-11-09 09:31 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:31 +01:00: /api/tabLeistungstypen
+2023-11-09 09:31 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:31 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:31 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:32 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:32 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:32 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:32 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:32 +01:00: /api/tabGleise
+2023-11-09 09:32 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefBST
+2023-11-09 09:32 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:32 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:32 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:32 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:32 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:32 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:32 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:32 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:32 +01:00: /api/tabBundeslaender
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:32 +01:00: /api/tabProjekte
+2023-11-09 09:32 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:32 +01:00: /api/tabRollen
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:32 +01:00: /api/tabLeistungstypen
+2023-11-09 09:32 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:32 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:32 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:32 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:32 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:32 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:32 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:32 +01:00: /api/tabGleise
+2023-11-09 09:32 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefBST
+2023-11-09 09:32 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:32 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:32 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:32 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:32 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:32 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:32 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:32 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:32 +01:00: /api/tabBundeslaender
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:32 +01:00: /api/tabProjekte
+2023-11-09 09:32 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:32 +01:00: /api/tabRollen
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:32 +01:00: /api/tabLeistungstypen
+2023-11-09 09:32 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:32 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:32 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:32 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:32 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:32 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:32 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:32 +01:00: /api/tabGleise
+2023-11-09 09:32 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefBST
+2023-11-09 09:32 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:32 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:32 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:32 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:32 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:32 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:32 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:32 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:32 +01:00: /api/tabBundeslaender
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:32 +01:00: /api/tabProjekte
+2023-11-09 09:32 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:32 +01:00: /api/tabRollen
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:32 +01:00: /api/tabLeistungstypen
+2023-11-09 09:32 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:32 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:32 +01:00: /api/tabZ_SQuerungen_SPfosten
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Leistungen_Gleise Key: nID_Z_Leistung_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungen Reference: tabZ_Sperrpausen_Gleise Key: nID_Z_Sperrpause_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabBelegungenv2 Reference: tabSperrpausen Key: nID_Sperrpause_Zeitlich
+2023-11-09 09:32 +01:00: Model: tabDatenpunkte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabDefNachbarschaften Reference: tabDefStreckenUndGleise Key: nID_DefGleisoderstrecke
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabDefStreckenUndGleise Reference: tabBundeslaender Key: nBundesland
+2023-11-09 09:32 +01:00: Model: tabGleise Reference: tabDefStreckenUndGleise Key: nID_DefStreckegleis
+2023-11-09 09:32 +01:00: Model: tabKabelgefaesse Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelschaechte Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabKabelverlegungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabLeistungskatalog Key: nID_Leistungskatalog
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabLeistungen Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabLeistungenMeta Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungstypen Key: txtTyp
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabLeistungsvarianten Key: txtVariante
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGründungsarten Key: txtGruendung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabTeilleistungen Key: txtTeilleisung
+2023-11-09 09:32 +01:00: Model: tabLeistungskatalog Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabLEUs Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignale Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSignalquerungspfosten Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSperrpausen Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen Reference: tabDefStreckenUndGleise Key: nID_DefStreckeGleis
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabDefWochentagsbloecke Key: nID_WirkungTage
+2023-11-09 09:32 +01:00: Model: tabSperrpausendefinitionen_AB Reference: tabSperrabschnitte Key: txtSperrabschnitt
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabSppBedarf Reference: tabSppBedarf_Gruende Key: txtGrund
+2023-11-09 09:32 +01:00: Model: tabStandard Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_Kabelverlegungen Reference: tabLeistungen Key: nID_Kabelverlegung
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelgefaesse Key: nID_Kabelgefaess
+2023-11-09 09:32 +01:00: Model: tabZ_Kabelgefaesse_KSchaechte Reference: tabKabelschaechte Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_KQuerungen_KSchaechte Reference: tabLeistungen Key: nID_KSchacht
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Leistung
+2023-11-09 09:32 +01:00: Model: tabZ_Leistungen_Sicherungsmassnahmen Reference: tabLeistungen Key: nID_Sicherungsmassnahme
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_LEUs_Datenpunkte Reference: tabLeistungen Key: nID_Datenpunkt
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_Signale_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_Signalquerungen_LEUs Reference: tabLeistungen Key: nID_LEU
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_AB_Bauzust Reference: tabSperrpausendefinitionen_AB Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausendef_GB_Bauzust Reference: tabSperrpausendefinitionen Key: nID_SperrpauseDef
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Bauzust Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gewerke Reference: tabGewerke Key: txtGewerk
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabGleise Key: nID_Gleis
+2023-11-09 09:32 +01:00: Model: tabZ_Sperrpausen_Gleise Reference: tabSperrpausen Key: nID_Sperrpause
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_SPfosten_Signale Reference: tabLeistungen Key: nID_Signal
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQuerung
+2023-11-09 09:32 +01:00: Model: tabZ_SQuerungen_SPfosten Reference: tabLeistungen Key: nID_SQPfosten
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabUser Key: nID_User
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_User_Projekte Reference: tabRollen Key: nID_Rolle
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungsverknuepfungstyp2
+2023-11-09 09:32 +01:00: Model: tabLeistungstypen Reference: tabLeistungstypen Key: txtID_Leistungszugehoerigkeit
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabDefBauzust Key: txtBauzust
+2023-11-09 09:32 +01:00: Model: tabZ_DefBauzust_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabDefBST Key: txtBST
+2023-11-09 09:32 +01:00: Model: tabZ_DefBST_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabDefNachbarschaften Key: nID_DefNachbarschaften
+2023-11-09 09:32 +01:00: Model: tabZ_DefNachbarschaften_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabDefStreckenUndGleise Key: nID_DefStreckenUndGleise
+2023-11-09 09:32 +01:00: Model: tabZ_DefStreckenUndGleise_Projekte Reference: tabProjekte Key: nID_Projekt
+2023-11-09 09:32 +01:00: ../controllers/tabGleise.controller.js
+2023-11-09 09:32 +01:00: /api/tabGleise
+2023-11-09 09:32 +01:00: ../controllers/tabDefBST.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefBST
+2023-11-09 09:32 +01:00: ../controllers/tabDefNachbarschaften.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefNachbarschaften
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Gleise
+2023-11-09 09:32 +01:00: /api/tabZ_Leistungen_Sicherungsmassnahmen
+2023-11-09 09:32 +01:00: /api/tabZ_KQuerungen_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_KSchaechte
+2023-11-09 09:32 +01:00: /api/tabZ_Kabelgefaesse_Kabelverlegungen
+2023-11-09 09:32 +01:00: /api/tabZ_Signale_LEUs
+2023-11-09 09:32 +01:00: /api/tabZ_Signalquerungen_LEUs
+2023-11-09 09:32 +01:00: ../controllers/tabSperrpausendefinitionen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabDefWochentagsbloecke.controller.js
+2023-11-09 09:32 +01:00: /api/tabDefWochentagsbloecke
+2023-11-09 09:32 +01:00: ../controllers/tabKabelanzahlen.controller.js
+2023-11-09 09:32 +01:00: ../controllers/tabSperrabschnitte.controller.js
+2023-11-09 09:32 +01:00: /api/tabSperrabschnitte
+2023-11-09 09:32 +01:00: ../controllers/tabBundeslaender.controller.js
+2023-11-09 09:32 +01:00: /api/tabBundeslaender
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabProjekte.controller.js
+2023-11-09 09:32 +01:00: /api/tabProjekte
+2023-11-09 09:32 +01:00: ../controllers/tabRollen.controller.js
+2023-11-09 09:32 +01:00: /api/tabRollen
+2023-11-09 09:32 +01:00: ../controllers/tabUser.controller.js
+2023-11-09 09:32 +01:00: /api/tabUser
+2023-11-09 09:32 +01:00: ../controllers/tabLeistungstypen.controller.js
+2023-11-09 09:32 +01:00: /api/tabLeistungstypen
+2023-11-09 09:32 +01:00: /api/tabZ_LEUs_Datenpunkte
+2023-11-09 09:32 +01:00: /api/tabZ_SPfosten_Signale
+2023-11-09 09:32 +01:00: /api/tabZ_SQuerungen_SPfosten

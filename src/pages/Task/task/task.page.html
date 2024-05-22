@@ -1,0 +1,2 @@
+<app-task-list [objects]="tasks" [(currentObject)]="currentTask" (onSelect)="setCurrentTask($event)" (onDelete)="setTasks();"></app-task-list>
+<app-task-editor [(currentFamily)]="currentFamily" [(currentObject)]="currentTask" [familyMembers]="familyMembers" (onSubmit)="setTasks(); resetCurrentTaskMember();"></app-task-editor>

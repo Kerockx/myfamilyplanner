@@ -1,0 +1,8 @@
+<app-family-list [objects]="familys" [(currentObject)]="currentFamily" (onSelect)="setCurrentFamily($event)" (onUpdate)="setFamilyUpdateProcess(true)"></app-family-list>
+@if(familyUpdateProcess){
+    <app-family-editor [(currentObject)]="currentFamily" (onSubmit)="setCurrentFamily($event); setFamilys()" (onCancel)="setFamilyUpdateProcess(false)"></app-family-editor>
+}
+<app-family-member-list [objects]="familyMembers" [(currentObject)]="currentFamilyMember" (onDelete)="setFamilyMembers()"></app-family-member-list>
+
+    <app-family-member-editor [(currentFamily)]="currentFamily" [(currentObject)]="currentFamilyMember" (onSubmit)="setFamilyMembers();resetCurrentFamilyMember();"></app-family-member-editor>
+

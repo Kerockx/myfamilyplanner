@@ -1,0 +1,16 @@
+<table>
+    <thead> 
+        <tr>     
+            <th>Name</th>
+        </tr> 
+    </thead>
+    <tbody>
+        @for (obj of objects(); track obj.ID) {
+            <tr (click)="setCurrentObject(obj)">
+                <td>{{obj.txt_name}}</td>
+                <td><button (click)="update()">Bearbeiten</button></td>
+                <td><button (click)="delete(obj)">Löschen</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

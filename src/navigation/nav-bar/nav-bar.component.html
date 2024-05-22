@@ -1,0 +1,12 @@
+<a routerLinkActive="active" routerLink="dashboard">Dashboard </a>
+<a routerLinkActive="active" routerLink="family">Familie </a>
+<a routerLinkActive="active" routerLink="tasks">Aufgaben </a>
+<a routerLinkActive="active" routerLink="schedular">Planer </a>
+
+
+<select [formControl]='familyFormControl'>
+    @for (obj of familys; track obj.ID) {
+    <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+    }
+</select>   
+

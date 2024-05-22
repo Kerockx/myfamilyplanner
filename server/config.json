@@ -1,0 +1,16 @@
+{
+  "SERVER_PORT": 8001,
+  "SERVER_HOST": "127.0.0.1",
+  "DB_HOST": "127.0.0.1",
+  "DB_USER": "root",
+  "DB_PASSWORD": "",
+  "DB": "family_planner",
+  "DB_DIALECT": "mysql",
+  "DB_POOL": {
+    "MAX": 5,
+    "MIN": 0,
+    "ACQUIRE": 30000,
+    "IDLE": 10000
+  }
+}
+
