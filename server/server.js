@@ -42,11 +42,15 @@ app.use(express.urlencoded({ extended: true }));
 
 //const db = require("./app/models");
 //db.sequelize.sync();
-
-require("./app/routes/def_family_member.routes")(app);
+require("./app/routes/auth.routes")(app);
+require("./app/routes/tab_users.routes")(app);
+require("./app/routes/def_daytime.routes")(app);
+require("./app/routes/def_family_member_type.routes")(app);
 require("./app/routes/def_task_category.routes")(app);
 require("./app/routes/def_task_category_sub.routes")(app);
 require("./app/routes/def_task_category_sub_sub.routes")(app);
+require("./app/routes/def_task_repeat.routes")(app);
+require("./app/routes/def_weekday.routes")(app);
 require("./app/routes/tab_familys.routes")(app);
 require("./app/routes/tab_family_members.routes")(app);
 require("./app/routes/tab_tasks.routes")(app);

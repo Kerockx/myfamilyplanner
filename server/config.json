@@ -3,14 +3,15 @@
   "SERVER_HOST": "127.0.0.1",
   "DB_HOST": "85.215.133.71",
   "DB_USER": "myfamilyplanner-app",
-  "DB_PASSWORD": "TSVapp1967!",
+  "DB_PASSWORD": "MFP19671!u",
   "DB": "myfamilyplanner",
   "DB_DIALECT": "mysql",
   "DB_POOL": {
-    "MAX": 5,
+    "MAX": 500,
     "MIN": 0,
     "ACQUIRE": 30000,
     "IDLE": 10000
-  }
+  },
+  "JWT_EXPIRETIME": "24h",
+  "JWT_SECRETE_KEY": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcxNjQ3MDMwOCwiaWF0IjoxNzE2NDcwMzA4fQ.4WLWc_b5mLsMItNDr5AwrDCc-brDtzb60EKvEhd6uRs"
 }
-

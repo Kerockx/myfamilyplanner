@@ -1,28 +1,33 @@
-
 <div [formGroup]="form">
-<input type="text" formControlName='txt_name'>
-<select formControlName='nID_task_category'>
-    @for (obj of taskCategoryDefs; track obj.ID) {
-    <option [value]="obj.ID">{{ obj.txt_name }}</option>            
-    }
-</select>
-@if(currentTaskCategoryDefID){
-    <select formControlName='nID_task_category_sub'>
-        @for (obj of filteredTaskCategorySubDefs; track obj.ID) {
-        <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+    <div>
+        <input type="text" formControlName='txt_name'>
+        <select formControlName='nID_task_category'>
+            @for (obj of taskCategoryDefs; track obj.ID) {
+            <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+            }
+        </select>
+        @if(currentTaskCategoryDefID){
+            <select formControlName='nID_task_category_sub'>
+                @for (obj of filteredTaskCategorySubDefs; track obj.ID) {
+                <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+                }
+            </select>
         }
-    </select>
-}
-@if(currentTaskCategorySubDefID){
-<select formControlName='nID_task_category_sub_sub'>
-    @for (obj of filteredTaskCategorySubSubDefs; track obj.ID) {
-    <option [value]="obj.ID">{{ obj.txt_name }}</option>            
-    }
-</select>
-}
-@if(currentTaskCategorySubSubDefID){
-<input type="text" formControlName='n_duration'>
-}
+        @if(currentTaskCategorySubDefID){
+        <select formControlName='nID_task_category_sub_sub'>
+            @for (obj of filteredTaskCategorySubSubDefs; track obj.ID) {
+            <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+            }
+        </select>
+        }
+    </div>
+    <div>
+        @if(currentTaskCategorySubSubDefID){
+        <input type="date" formControlName='d_date'>
+        <input type="time" formControlName='t_starttime' step="900">
+        <input type="text" formControlName='n_duration'>
+        }
+    </div>
 </div>
     <div [formGroup]="familyMemberForm">
         @for (obj of familyMemberFormArray.controls; track i; let i = $index) {

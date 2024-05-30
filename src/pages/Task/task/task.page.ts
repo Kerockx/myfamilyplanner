@@ -7,11 +7,12 @@ import { Task } from '../../../models/task.model';
 import { TaskAPIService } from '../../../services/Task/task-api.service';
 import { TaskService } from '../../../services/Task/task.service';
 import { FamilyMember } from '../../../models/family-member.model';
+import { TaskEditorRepeatComponent } from '../../../components/Task/task-editor-repeat/task-editor-repeat.component';
 
 @Component({
   selector: 'app-task',
   standalone: true,
-  imports: [TaskEditorComponent,TaskListComponent],
+  imports: [TaskEditorComponent,TaskEditorRepeatComponent,TaskListComponent],
   templateUrl: './task.page.html',
   styleUrl: './task.page.scss'
 })
@@ -59,7 +60,7 @@ export class TaskPage implements OnInit{
     this.currentTask.set(object);
   }
 
-  resetCurrentTaskMember():void{
+  resetCurrentTask():void{
     this.currentTask.set(new Task);
   }
 }

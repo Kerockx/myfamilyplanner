@@ -4,11 +4,13 @@ import { TaskPage } from '../pages/Task/task/task.page';
 import { SchedularPage } from '../pages/Schedular/schedular/schedular.page';
 import { DashboardPage } from '../pages/Dashboard/dashboard/dashboard.page';
 import { LoginPage } from '../pages/login/login.page';
+import { inject } from '@angular/core';
+import { AuthService } from '../services/Auth/auth.service';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'schedular',
         pathMatch: 'full'
     },
     {
@@ -19,21 +21,25 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         data: { title: 'Dashboard' },
-        component: DashboardPage
+        component: DashboardPage,
+        canActivate: [() => inject(AuthService).isTokenValid()]
     },
     {
         path: 'family',
         data: { title: 'Familie' },
-        component: FamilyPage
+        component: FamilyPage,
+        canActivate: [() => inject(AuthService).isTokenValid()]
     },
     {
         path: 'tasks',
         data: { title: 'Aufgaben' },
-        component: TaskPage
+        component: TaskPage,
+        canActivate: [() => inject(AuthService).isTokenValid()]
     },
     {
         path: 'schedular',
         data: { title: 'Planer' },
-        component: SchedularPage
+        component: SchedularPage,
+        canActivate: [() => inject(AuthService).isTokenValid()]
     },
 ];

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Family } from '../../models/family.model';
 import { FamilyMember } from '../../models/family-member.model';
-import { FamilyMemberDef } from '../../models/family-member-def.model';
 
 @Injectable({
   providedIn: 'root'

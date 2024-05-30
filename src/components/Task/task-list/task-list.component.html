@@ -5,6 +5,8 @@
             <th>Kategorie</th>
             <th>Unterkategorie</th>
             <th>Aufgabe</th>
+            <th>Datum</th>
+            <th>Startzeit</th>
             <th>Dauer</th>
             <th>Familienmitglieder</th>
         </tr> 
@@ -16,6 +18,8 @@
                 <td>{{obj.def_task_category_sub_sub.def_task_category_sub.def_task_category.txt_name}}</td>
                 <td>{{obj.def_task_category_sub_sub.def_task_category_sub.txt_name}}</td>
                 <td>{{obj.def_task_category_sub_sub.txt_name}}</td>
+                <td>{{obj.d_date}}</td>
+                <td>{{obj.t_starttime}}</td>
                 <td>{{obj.n_duration}}</td>
                 <td>
                     @if(obj.tabz_tab_tasks_tab_family_members){

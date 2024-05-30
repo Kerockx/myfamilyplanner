@@ -7,6 +7,7 @@ import { TaskCategorySubDef } from '../../models/task-category-sub-def.model';
 import { TaskCategoryDef } from '../../models/task-category-def.model';
 import { Family } from '../../models/family.model';
 import { TaskCategorySubSubDef } from '../../models/task-category-sub-sub-def.modelmodel';
+import { DefTaskRepeat } from '../../models/def-task-repeat.model';
 
 const taskAPI = 'tab_tasks'
 const taskBaseUrl = `${server.URL}/api/${taskAPI}`;
@@ -19,6 +20,11 @@ const TaskCategorySubDefBaseUrl = `${server.URL}/api/${TaskCategorySubDefAPI}`;
 
 const TaskCategorySubSubDefAPI = 'def_task_category_sub_sub'
 const TaskCategorySubSubDefBaseUrl = `${server.URL}/api/${TaskCategorySubSubDefAPI}`;
+
+const DEF_TASK_REPEAT_API = 'def_task_repeat'
+const DEF_TASK_REPEAT_BASE_URL = `${server.URL}/api/${DEF_TASK_REPEAT_API}`;
+
+DEF_TASK_REPEAT_BASE_URL
 
 @Injectable({
   providedIn: 'root'
@@ -139,4 +145,5 @@ export class TaskAPIService {
   deleteAllTaskCategorySubSubDefs(): Observable<any> {
     return this.http.delete(TaskCategorySubSubDefBaseUrl);
   }
+
 }

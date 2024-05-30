@@ -44,7 +44,8 @@ export class FamilyListComponent {
     });
   }
 
-  update(){
+  update(object:Family){
+    this.onSelect.emit(object);
     this.onUpdate.emit();
   }
 

@@ -4,7 +4,7 @@ import { Observable, map } from 'rxjs';
 import { server } from '../../environments/environment';
 import { Family } from '../../models/family.model';
 import { FamilyMember } from '../../models/family-member.model';
-import { FamilyMemberDef } from '../../models/family-member-def.model';
+import { DefFamilyMemberType } from '../../models/def-family-member-type.model';
 
 const familyAPI = 'tab_familys'
 const familyBaseUrl = `${server.URL}/api/${familyAPI}`;
@@ -12,8 +12,8 @@ const familyBaseUrl = `${server.URL}/api/${familyAPI}`;
 const familyMemberAPI = 'tab_family_members'
 const familyMemberBaseUrl = `${server.URL}/api/${familyMemberAPI}`;
 
-const familyMemberDefAPI = 'def_family_member'
-const familyMemberDefBaseUrl = `${server.URL}/api/${familyMemberDefAPI}`;
+const devFamilyMemberTypeAPI = 'def_family_member_type'
+const DEF_FAMILY_MEMBER_TYPE_API_BASE_URL = `${server.URL}/api/${devFamilyMemberTypeAPI}`;
 
 @Injectable({
   providedIn: 'root'
@@ -79,27 +79,14 @@ export class FamilyAPIService {
   }
 
   /*----------------------------------------------------------------
-  FamilyMemberDef API
+  Def_Family_Member_Type API
   ----------------------------------------------------------------*/
-  getAllFamilyMemberDefs(): Observable<FamilyMemberDef[]> {
-    return this.http.get<FamilyMemberDef[]>(familyMemberDefBaseUrl);
+  getAllDefFamilyMemberTypes(): Observable<DefFamilyMemberType[]> {
+    return this.http.get<DefFamilyMemberType[]>(DEF_FAMILY_MEMBER_TYPE_API_BASE_URL);
   }
-  getFamilyMemberDef(value: FamilyMemberDef): Observable<FamilyMemberDef> {
+  getDefFamilyMemberTypes(value: DefFamilyMemberType): Observable<DefFamilyMemberType> {
     const ID = value.ID;
-    return this.http.get<FamilyMemberDef>(`${familyMemberDefBaseUrl}/${ID}`);
+    return this.http.get<DefFamilyMemberType>(`${DEF_FAMILY_MEMBER_TYPE_API_BASE_URL}/${ID}`);
   }
-  createFamilyDef(data: FamilyMemberDef): Observable<FamilyMemberDef> {
-    return this.http.post<FamilyMemberDef>(familyMemberDefBaseUrl, data);
-  }
-  updateFamilyMemberDef(value: FamilyMemberDef, data: FamilyMemberDef): Observable<FamilyMemberDef> {
-    const ID = value.ID;
-    return this.http.put<FamilyMemberDef>(`${familyMemberDefBaseUrl}/${ID}`, data);
-  }
-  deleteFamilyMemberDef(value: FamilyMemberDef): Observable<any> {
-    const ID = value.ID;
-    return this.http.delete(`${familyMemberDefBaseUrl}/${ID}`);
-  }
-  deleteAllFamilyMemberDefs(): Observable<any> {
-    return this.http.delete(familyMemberDefBaseUrl);
-  }
+
 }

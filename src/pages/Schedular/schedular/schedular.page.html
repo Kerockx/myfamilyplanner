@@ -1,1 +1,2 @@
-<p>schedular works!</p>
+<app-task-planner-list [objects]="tasks" [(currentObject)]="currentTask" (onSelect)="setCurrentTask($event)" (onDelete)="setTasks();"></app-task-planner-list>
+<app-schedular-list [tasks]="tasks" [(currentTask)]="currentTask"></app-schedular-list>

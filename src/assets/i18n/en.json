@@ -1,0 +1,11 @@
+{
+    "weekdays":{
+        "monday":"Monday",
+        "tuesday":"Tuesday",
+        "wendsday":"Wendsday",
+        "thursday":"Thursday",
+        "friday":"Friday",
+        "saturday":"Saturday",
+        "sunday":"Sunday"
+    }
+}

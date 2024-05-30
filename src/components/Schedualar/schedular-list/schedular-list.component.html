@@ -1,0 +1,4 @@
+{{currentTask().txt_name}}
+@for (obj of schedularListItems; track obj.ID) {
+    <app-schedular-list-item [listItem]="obj" (onSelect)="setCurretSchedularListItem(obj)"></app-schedular-list-item>  
+}

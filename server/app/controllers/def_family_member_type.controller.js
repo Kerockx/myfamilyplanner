@@ -1,5 +1,5 @@
 const db = require("../models");
-const TABLE = db.def_family_member;
+const TABLE = db.def_family_member_type;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Object

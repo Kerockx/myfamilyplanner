@@ -3,12 +3,13 @@
         <input type="text" formControlName="txt_name">      
     </div>   
     <div>
-        <select formControlName='nID_def_family_member'>
-            @for (obj of familyMemberDefs; track obj.ID) {
+        <select formControlName='nID_def_family_member_type'>
+            @for (obj of defFamilyMemberTypes; track obj.ID) {
             <option [value]="obj.ID">{{ obj.txt_name }}</option>            
             }
         </select>
     </div>
+    
     <div>
         <button type="button" (click)="submit()">Speichern</button>
         @if (currentObject().ID) {

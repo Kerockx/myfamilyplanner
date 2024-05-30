@@ -1,1 +1,6 @@
-<p>login works!</p>
+
+<form [formGroup]="form">
+    <input  formControlName="username" (keyup.enter)="login()" required>
+    <input  type="password" formControlName="password" (keyup.enter)="login()" required>  
+    <button (click)="login()">Login</button>  
+</form>

@@ -1,5 +1,5 @@
 module.exports = app => {
-    const tableName = "def_family_member";
+    const tableName = "def_daytime";
     
     console.log("../controllers/"+tableName+".controller.js");
     const controller = require("../controllers/"+tableName+".controller.js");

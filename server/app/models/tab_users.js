@@ -10,6 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     txt_name: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    password: {
+      type: DataTypes.STRING(255),
+      allowNull: false
     }
   }, {
     sequelize,

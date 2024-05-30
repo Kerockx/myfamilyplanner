@@ -91,6 +91,13 @@ exports.findOne = (req, res) => {
 
 // Update a Object by the id in the request
 exports.update = async (req, res) => {
+
+  console.log(req.body);
+  if(req.body.t_starttime){
+    const moment = require('moment');
+    const t_starttime = moment(req.body.t_starttime).format('hh:mm:ss');
+    req.body.t_starttime = t_starttime;
+  }
   const pk = req.params.id;
   const family_members = req.body.family_members;
   const transaction = await db.sequelize.transaction();

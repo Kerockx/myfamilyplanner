@@ -7,11 +7,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    nID_def_family_member: {
+    nID_def_family_member_type: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'def_family_member',
+        model: 'def_family_member_type',
         key: 'ID'
       }
     },
@@ -51,7 +51,7 @@ module.exports = function(sequelize, DataTypes) {
         name: "tab_family_members_def_family_member",
         using: "BTREE",
         fields: [
-          { name: "nID_def_family_member" },
+          { name: "nID_def_family_member_type" },
         ]
       },
     ]

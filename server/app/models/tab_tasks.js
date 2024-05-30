@@ -19,6 +19,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    nID_task_to_repeat: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'tab_tasks',
+        key: 'ID'
+      }
+    },
     txt_name: {
       type: DataTypes.STRING(255),
       allowNull: false
@@ -27,6 +35,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0
+    },
+    d_date: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    t_starttime: {
+      type: DataTypes.TIME,
+      allowNull: true
     }
   }, {
     sequelize,
@@ -46,6 +62,13 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "nID_task_category_sub_sub" },
+        ]
+      },
+      {
+        name: "tab_tasks_nID_tab_tasks_master_tab_tasks",
+        using: "BTREE",
+        fields: [
+          { name: "nID_task_to_repeat" },
         ]
       },
     ]

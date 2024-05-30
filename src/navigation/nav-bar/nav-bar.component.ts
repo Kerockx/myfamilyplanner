@@ -4,6 +4,7 @@ import { FamilyAPIService } from '../../services/Family/family-api.service';
 import { Family } from '../../models/family.model';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FamilyService } from '../../services/Family/family.service';
+import { AuthService } from '../../services/Auth/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -19,6 +20,7 @@ export class NavBarComponent {
 
   constructor(
     private router:Router,
+    private authService:AuthService,
     private familyAPIService:FamilyAPIService,
     private familyService:FamilyService){    
     this.familyFormControl.valueChanges.subscribe((value:number) =>{
@@ -41,6 +43,10 @@ export class NavBarComponent {
       },  
       error: (e) => console.error(e)
     })
+  }
+
+  logout(): void {
+    this.authService.logoutUser();
   }
 
 }

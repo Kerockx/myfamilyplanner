@@ -8,6 +8,8 @@ import { Family } from '../../../models/family.model';
 import { FamilyMember } from '../../../models/family-member.model';
 import { TabzTabTasksTabFamilyMembers } from '../../../models/tabz-tab-tasks-tab-family-members.model';
 import { TaskCategorySubSubDef } from '../../../models/task-category-sub-sub-def.modelmodel';
+import moment, { Moment } from 'moment';
+import { Time } from '@angular/common';
 
 
 @Component({
@@ -58,6 +60,8 @@ export class TaskEditorComponent implements OnInit{
       nID_task_category_sub : new FormControl('', [Validators.required]),
       nID_task_category_sub_sub : new FormControl('', [Validators.required]),
       txt_name : new FormControl('', [Validators.required]),
+      d_date : new FormControl(null),
+      t_starttime : new FormControl(null),
       n_duration : new FormControl('', [Validators.required]),
     });
 
@@ -120,7 +124,7 @@ export class TaskEditorComponent implements OnInit{
     if(this.familyMembers()){
       this.familyMembers()!.forEach(() => this.familyMemberFormArray.push(new FormControl()));
     }
-   
+    
   }
 
   setCategoryDefs():void{
@@ -172,13 +176,19 @@ export class TaskEditorComponent implements OnInit{
     }
   }
 
+ 
+
   update(){
     if(this.currentObject().ID){
       let object: Task = this.form.value;
       object.family_members = this.getFamilyMembers();
+      if(this.form.controls['t_starttime'].value){
+        const starttime = moment(this.form.controls['t_starttime'].value, "hh:mm:ss");
+        object.t_starttime = starttime;
+      }
       this.ObjectAPIService.updateTask(this.currentObject(),object).subscribe({
         next: (data) => {
-          this.form.reset();
+          //this.form.reset();
           this.setFormArrayValues(this.familyMemberFormArray,false)
           this.onSubmit.emit(data);
         },  
@@ -188,13 +198,13 @@ export class TaskEditorComponent implements OnInit{
   }
 
   create(){    
-    if (this.currentFamily().ID) {
+    if (this.currentFamily().ID) {  
       let object: Task = this.form.value;
       object.nID_family = this.currentFamily().ID!;
       object.family_members = this.getFamilyMembers();
       this.ObjectAPIService.createTask(object).subscribe({
           next: (data) => {
-            this.form.reset();
+           // this.form.reset();
             this.setFormArrayValues(this.familyMemberFormArray,false)
             this.onSubmit.emit(data);
           },

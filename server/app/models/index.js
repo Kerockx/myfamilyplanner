@@ -17,11 +17,14 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-
-db.def_family_member = require('./def_family_member.js')(sequelize, Sequelize);
+db.tab_users = require('./tab_users.js')(sequelize, Sequelize);
+db.def_daytime = require('./def_daytime.js')(sequelize, Sequelize);
+db.def_family_member_type = require('./def_family_member_type.js')(sequelize, Sequelize);
 db.def_task_category = require('./def_task_category.js')(sequelize, Sequelize);
 db.def_task_category_sub = require('./def_task_category_sub.js')(sequelize, Sequelize);
 db.def_task_category_sub_sub = require('./def_task_category_sub_sub.js')(sequelize, Sequelize);
+db.def_task_repeat = require('./def_task_repeat.js')(sequelize, Sequelize);
+db.def_weekdy = require('./def_weekday.js')(sequelize, Sequelize);
 db.tab_familys = require('./tab_familys.js')(sequelize, Sequelize);
 db.tab_family_members = require('./tab_family_members.js')(sequelize, Sequelize);
 db.tab_tasks = require('./tab_tasks.js')(sequelize, Sequelize);

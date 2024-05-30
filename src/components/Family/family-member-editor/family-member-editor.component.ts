@@ -3,7 +3,8 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { Family } from '../../../models/family.model';
 import { FamilyAPIService } from '../../../services/Family/family-api.service';
 import { FamilyMember } from '../../../models/family-member.model';
-import { FamilyMemberDef } from '../../../models/family-member-def.model';
+import { DefAPIService } from '../../../services/Def/def-api.service';
+import { DefFamilyMemberType } from '../../../models/def-family-member-type.model';
 
 @Component({
   selector: 'app-family-member-editor',
@@ -18,15 +19,15 @@ export class FamilyMemberEditorComponent implements OnInit {
   onSubmit = output<FamilyMember>();
 
   public form:FormGroup;
-  public familyMemberDefs:FamilyMemberDef[] = [];
+  public defFamilyMemberTypes:DefFamilyMemberType[] = [];
 
   constructor(
     private formBuilder:FormBuilder,
     private objectAPIService:FamilyAPIService){
-
+    
     this.form = this.formBuilder.group({
       txt_name : new FormControl('', [Validators.required]),
-      nID_def_family_member : new FormControl('', [Validators.required]),
+      nID_def_family_member_type : new FormControl('', [Validators.required]),
     });
 
     effect(() => {
@@ -43,9 +44,9 @@ export class FamilyMemberEditorComponent implements OnInit {
   }
 
   setFamilieMemberDefs():void{
-    this.objectAPIService.getAllFamilyMemberDefs().subscribe({
+    this.objectAPIService.getAllDefFamilyMemberTypes().subscribe({
       next: (data) => {
-        this.familyMemberDefs = data;
+        this.defFamilyMemberTypes = data;
       },
       error: (e) => console.error(e),
     });

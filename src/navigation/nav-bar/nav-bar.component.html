@@ -1,3 +1,4 @@
+<a routerLinkActive="active" routerLink="login">Login </a>
 <a routerLinkActive="active" routerLink="dashboard">Dashboard </a>
 <a routerLinkActive="active" routerLink="family">Familie </a>
 <a routerLinkActive="active" routerLink="tasks">Aufgaben </a>
@@ -9,4 +10,5 @@
     <option [value]="obj.ID">{{ obj.txt_name }}</option>            
     }
 </select>   
+<button (click)="logout()">Logout</button>
 

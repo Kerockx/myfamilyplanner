@@ -1,0 +1,22 @@
+export const LeistungStorage = {
+    LEISTUNG_PLANBEZEICHNUNG:'LEISTUNG_PLANBEZEICHNUNG',
+    LEISTUNG_BAUZUSTAND:'LEISTUNG_BAUZUSTAND',
+    JWT_TOKEN:'JWT_TOKEN'
+}
+
+export const JWTStorage = {
+    JWT_TOKEN:'JWT_TOKEN'
+}
+
+export const UserStorage = {
+    CURRENT_USER:'CURRENT_USER'
+}
+
+export const ProjectStorage = {
+    CURRENT_PROJECT:'CURRENT_PROJECT',
+    CURRENT_PROJECT_USER:'CURRENT_PROJECT_USER'
+}
+
+export const AppStorage = {
+    CURRENT_APP_VERSION:'CURRENT_APP_VERSION'
+}

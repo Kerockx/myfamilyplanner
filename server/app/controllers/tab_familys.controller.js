@@ -24,7 +24,8 @@ exports.findAll = (req, res) => {
       res.send(data);
     })
     .catch(err => {
-      res.status(500).send({
+      console.log(err);
+      res.status(500).send({   
         message:
           err.message || "Some error occurred while retrieving objects."
       });
@@ -45,6 +46,7 @@ exports.findOne = (req, res) => {
       }
     })
     .catch(err => {
+      console.log(err);
       res.status(500).send({
         message: "Error retrieving Object with id=" + pk
       });

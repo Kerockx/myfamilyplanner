@@ -1,0 +1,46 @@
+<p>Serie für Aufgabe hinzufügen</p>
+<form [formGroup]="form">
+<div>
+@if(defTaskRepeats){
+    <select formControlName='defTaskRepeat'>
+        @for (obj of defTaskRepeats; track obj.ID) {
+        <option [value]="obj.ID">{{ obj.txt_name }}</option>            
+        }
+    </select>
+}
+</div>
+@if (customDaySelect) {
+<div>
+    <label>
+        <input type="checkbox" formControlName="is_monday" title="Montag" (change)="changeCheckboxValue($event,'is_monday')">
+        {{'weekdays.monday' | translate}}
+    </label>
+    <label>
+    <input type="checkbox" formControlName="is_tuesday" (change)="changeCheckboxValue($event,'is_tuesday')">
+        {{'weekdays.tuesday' | translate}}   
+    </label>
+    <label>
+        <input type="checkbox" formControlName="is_wendsday" (change)="changeCheckboxValue($event,'is_wendsday')">
+        {{'weekdays.wendsday' | translate}}     
+    </label>
+    <label>
+        <input type="checkbox" formControlName="is_thursday" (change)="changeCheckboxValue($event,'is_thursday')">
+        {{'weekdays.thursday' | translate}}          
+    </label>
+    <label>
+        <input type="checkbox" formControlName="is_friday" (change)="changeCheckboxValue($event,'is_friday')">
+        {{'weekdays.friday' | translate}}   
+    </label>
+    <label>
+        <input type="checkbox" formControlName="is_saturday" (change)="changeCheckboxValue($event,'is_saturday')">
+        {{'weekdays.saturday' | translate}}  
+    </label>
+    <label>
+        <input type="checkbox" formControlName="is_sunday" (change)="changeCheckboxValue($event,'is_sunday')">
+        {{'weekdays.sunday' | translate}}
+    </label>
+    <button type="button" (click)="submit()">Erstellen</button>
+</div>
+}
+
+</form>
