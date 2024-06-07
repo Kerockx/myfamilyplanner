@@ -1,5 +1,5 @@
 const db = require("../models");
-const TABLE = db.def_family_member_type;
+const TABLE = db.def_activities;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Object
@@ -20,6 +20,22 @@ exports.create = (req, res) => {
 // Retrieve all Objects from the database.
 exports.findAll = (req, res) => {
   TABLE.findAll()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving objects."
+      });
+    });
+};
+
+// Retrieve all Objects from the database.
+exports.findAllMainActivities = (req, res) => {
+  TABLE.findAll({
+    where:{is_main_activity:1}
+  })
     .then(data => {
       res.send(data);
     })

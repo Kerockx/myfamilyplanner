@@ -1,1 +1,11 @@
 export const DEF_TASK_REPEAT_IDS_WITHOUT_CUSTOM_DAY_SELECT = [1,2,3];
+export const DEF_FAMILY_MEMBER = {
+    FATHER_ID:1,
+    MOTHER_ID:2,
+    CHILD_ID:3
+}
+export const DEF_ACTIVITY_CATEGORIES = {
+    MAIN_ACTIVITIES_ID:1
+}
+
+

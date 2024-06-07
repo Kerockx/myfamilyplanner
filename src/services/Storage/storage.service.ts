@@ -1,38 +1,40 @@
 import { Injectable } from '@angular/core';
-
 import { Storage } from '@ionic/storage-angular';
+import { Observable, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService {
   private _storage: Storage | null = null;
+  private _storagePromise: Promise<void>;
 
   constructor(private storage: Storage) {
-    this.init();
+    this._storagePromise = this.init();
   }
 
-  async init() {
-    // If using, define drivers here: await this.storage.defineDriver(/*...*/);
+  private async init() {
     const storage = await this.storage.create();
     this._storage = storage;
   }
 
-  // Create and expose methods that users of this service can
-  // call, for example:
-  async set(key: string, value: any) {
-    await this._storage?.set(key, value);
+  private async ensureStorageReady() {
+    await this._storagePromise;
   }
 
-  async get(key: string) {
-    return await this._storage?.get(key);
+  set(key: string, value: any): Observable<void> {
+    return from(this.ensureStorageReady().then(() => this._storage?.set(key, value)));
   }
 
-  async remove(key: string) {
-    await this._storage?.remove(key);
+  get(key: string): Observable<any> {
+    return from(this.ensureStorageReady().then(() => this._storage?.get(key)));
   }
 
-  async clear() {
-    await this._storage?.clear();
+  remove(key: string): Observable<void> {
+    return from(this.ensureStorageReady().then(() => this._storage?.remove(key)));
+  }
+
+  clear(): Observable<void> {
+    return from(this.ensureStorageReady().then(() => this._storage?.clear()));
   }
 }

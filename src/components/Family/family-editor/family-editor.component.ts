@@ -60,12 +60,14 @@ export class FamilyEditorComponent {
 
   create(){
     let object:Family = this.form.value;
+    /*
     this.objectAPIService.createFamily(object).subscribe({
       next: (data) => {
         this.onSubmit.emit(data);
       },  
       error: (e) => console.error(e)
     });
+    */
   }
 
   cancel():void{

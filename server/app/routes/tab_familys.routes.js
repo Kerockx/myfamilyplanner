@@ -9,7 +9,7 @@ module.exports = app => {
     var router = require("express").Router();
 
     // Create a new object
-    router.post("/", controller.create);
+    router.post("/:userID", controller.create);
   
     // Retrieve all objects
     router.get("/", controller.findAll);

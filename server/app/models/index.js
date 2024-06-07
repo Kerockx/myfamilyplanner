@@ -18,8 +18,11 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.tab_users = require('./tab_users.js')(sequelize, Sequelize);
-db.def_daytime = require('./def_daytime.js')(sequelize, Sequelize);
-db.def_family_member_type = require('./def_family_member_type.js')(sequelize, Sequelize);
+db.def_activities = require('./def_activities.js')(sequelize, Sequelize);
+db.def_activity_tasks = require('./def_activity_tasks.js')(sequelize, Sequelize);
+db.def_activity_categories = require('./def_activity_categories.js')(sequelize, Sequelize);
+db.def_daytimes = require('./def_daytimes.js')(sequelize, Sequelize);
+db.def_family_member_types = require('./def_family_member_types.js')(sequelize, Sequelize);
 db.def_task_category = require('./def_task_category.js')(sequelize, Sequelize);
 db.def_task_category_sub = require('./def_task_category_sub.js')(sequelize, Sequelize);
 db.def_task_category_sub_sub = require('./def_task_category_sub_sub.js')(sequelize, Sequelize);
@@ -27,8 +30,10 @@ db.def_task_repeat = require('./def_task_repeat.js')(sequelize, Sequelize);
 db.def_weekdy = require('./def_weekday.js')(sequelize, Sequelize);
 db.tab_familys = require('./tab_familys.js')(sequelize, Sequelize);
 db.tab_family_members = require('./tab_family_members.js')(sequelize, Sequelize);
+db.tab_family_members_activities = require('./tab_family_members_activities.js')(sequelize, Sequelize);
 db.tab_tasks = require('./tab_tasks.js')(sequelize, Sequelize);
-db.tabZ_tab_tasks_tab_family_members = require('./tabz_tab_tasks_tab_family_members.js')(sequelize, Sequelize);
+db.tabZ_tab_tasks_tab_family_members = require('./tabZ_tab_tasks_tab_family_members.js')(sequelize, Sequelize);
+db.tabZ_tab_users_tab_familys = require('./tabZ_tab_users_tab_familys.js')(sequelize, Sequelize);
 
 const debug = require('debug')('db:autocreate');
 const tableModel = {};

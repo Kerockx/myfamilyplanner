@@ -36,7 +36,7 @@ exports.findAllByFamily = (req, res) => {
   const ID = req.params.id;
   TABLE.findAll({
     where:{nID_family:ID},
-    include:[{ model: db.def_family_member_type, required: false },]
+    include:[{ model: db.def_family_member_types, required: false },]
   })
     .then(data => {
       res.send(data);

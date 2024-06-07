@@ -3,18 +3,23 @@ const TABLE = db.tab_familys;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Object
-exports.create = (req, res) => {
-  const object = req.body
-  TABLE.create(object)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Object."
-      });
+exports.create = async (req, res) => {
+  const userID = req.params.userID;
+  const transaction = await db.sequelize.transaction();
+  try{
+    const FAMILY = await TABLE.create(req.body, { transaction });
+    await db.tabZ_tab_users_tab_familys.create({
+      nID_user: userID,
+      nID_family:FAMILY.ID
+    }, { transaction });
+    await transaction.commit();
+    res.send(FAMILY);
+  } catch (err) {
+    await transaction.rollback();
+    res.status(500).send({
+      message: err.message || "Error updating Object",
     });
+  }
 };
 
 // Retrieve all Objects from the database.

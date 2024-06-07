@@ -1,0 +1,11 @@
+<div [formGroup]="form">
+    @for (obj of formArray.controls; track i; let i = $index) {
+    <label formArrayName="objectID">
+        <input type="checkbox" [formControlName]="i" (change)="changeValue($event,i)">
+
+        {{objects()[i].txt_name | translate}}
+        </label>
+    }
+</div>
+
+

@@ -1,5 +1,5 @@
 const db = require("../models");
-const TABLE = db.def_daytime;
+const TABLE = db.def_activity_categories;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Object
@@ -19,7 +19,11 @@ exports.create = (req, res) => {
 
 // Retrieve all Objects from the database.
 exports.findAll = (req, res) => {
-  TABLE.findAll()
+  TABLE.findAll({
+    include:[
+      {model:db.def_activities,include:db.def_activity_tasks}
+    ]
+  })
     .then(data => {
       res.send(data);
     })

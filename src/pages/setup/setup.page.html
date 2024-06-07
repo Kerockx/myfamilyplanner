@@ -1,0 +1,38 @@
+<div>
+    <!-- Zustand 0: Familienformular -->
+    @if(setupState === 0){
+        <form [formGroup]="familyForm">
+            <div>
+                <input type="text" formControlName="txt_name"> <!-- Eingabefeld für den Familiennamen -->
+                <button (click)="setSetupState(1)">Weiter</button> <!-- Schaltfläche zum Fortfahren -->
+            </div>
+        </form>
+    }
+    <!-- Zustand 1: Hinzufügen und Entfernen von Familienmitgliedern -->
+    @if(setupState === 1){
+        @for (obj of defFamilyMemberTypes; track obj.ID) {
+            @if(obj.ID){
+                <div>
+                    {{familyMemberCounts[$index].count}} {{obj.txt_name | translate}} <button (click)="RemoveFamilyMember(obj)">-</button><button (click)="AddFamilyMember(obj)">+</button> <!-- Anzeige von Familienmitgliedertypen mit Schaltflächen zum Hinzufügen und Entfernen -->
+                </div>
+            }     
+        }      
+        <div>
+            <button (click)="setSetupState(1)">Weiter</button> <!-- Schaltfläche zum Fortfahren -->
+        </div>     
+    }
+    <!-- Zustand 2: Auswahl der Hauptaktivität für Familienmitglieder -->
+    @if(setupState === 2){
+        @for (obj of setupFamilyData.familyMemberData; track $index) {
+            <div>
+                {{obj.familyMember.txt_name | translate}} <!-- Anzeige des Familiennamens -->
+            </div>
+            <div>
+                <custom-dynamic-checkbox-select [objects]="defMainActivities" (onChange)="SetMainActivity($event,$index)"></custom-dynamic-checkbox-select> <!-- Auswahl der Hauptaktivität für das Familienmitglied -->
+            </div>
+        }
+        <div>
+            <button (click)="setSetupState(1)">Fertig</button> <!-- Schaltfläche zum Abschließen -->
+        </div>
+    }
+</div>

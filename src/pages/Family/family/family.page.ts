@@ -1,4 +1,4 @@
-import { Component, effect, model } from '@angular/core';
+import { Component, OnInit, effect, model } from '@angular/core';
 import { FamilyEditorComponent } from '../../../components/Family/family-editor/family-editor.component';
 import { FamilyListComponent } from '../../../components/Family/family-list/family-list.component';
 import { Family } from '../../../models/family.model';
@@ -15,67 +15,61 @@ import { FamilyMember } from '../../../models/family-member.model';
   templateUrl: './family.page.html',
   styleUrl: './family.page.scss'
 })
-export class FamilyPage {
-  familys:Family[] = [];
-  familyMembers:FamilyMember[] = [];
-  currentFamily = model<Family>(new Family);
-  currentFamilyMember = model<FamilyMember>(new FamilyMember);
+export class FamilyPage implements OnInit {
+  familys: Family[] = [];
+  familyMembers: FamilyMember[] = [];
+  currentFamily: Family = new Family();
+  currentFamilyMember: FamilyMember = new FamilyMember();
   familyUpdateProcess = false;
-  
+
   constructor(
-    private familyService:FamilyService,
-    private familyAPIService:FamilyAPIService){    
-      effect(() => {
-        if(this.currentFamily().ID){
-          this.setFamilyMembers();
-        }
-      });
-  }
+    private familyService: FamilyService,
+    private familyAPIService: FamilyAPIService
+  ) {}
 
   ngOnInit(): void {
     this.setFamilys();
-    if(this.familyService.currentFamily){
-      this.currentFamily.set(this.familyService.currentFamily);
+    if (this.familyService.currentFamily) {
+      this.currentFamily = this.familyService.currentFamily;
+      this.setFamilyMembers();
     }
   }
 
-  setFamilys():void{
+  setFamilys(): void {
     this.familyAPIService.getAllFamilys().subscribe({
-      next:(data)=>{
+      next: (data) => {
         this.familys = data;
-      },  
+      },
       error: (e) => console.error(e)
-    })
+    });
   }
 
-  setFamilyMembers():void{
-    if(this.currentFamily().ID){
-      this.familyAPIService.getAllFamilyMembersByFamily(this.currentFamily()).subscribe({
-        next:(data)=>{
-          this.familyService.familyMembers = data;
-          this.familyMembers = data;         
-        },  
-        error: (e) => console.error(e)
-      })
-    }
+  setFamilyMembers(): void {
+    this.familyAPIService.getAllFamilyMembersByFamily(this.currentFamily).subscribe({
+      next: (data) => {
+        this.familyService.familyMembers = data;
+        this.familyMembers = data;
+      },
+      error: (e) => console.error(e)
+    });
   }
 
-  setCurrentFamily(object:Family):void{
-    this.currentFamily.set(object);
+  setCurrentFamily(object: Family): void {
+    this.currentFamily = object;
     this.familyService.currentFamily = object;
     this.setFamilyMembers();
     this.resetCurrentFamilyMember();
   }
 
-  setCurrentFamilyMember(object:FamilyMember):void{
-    this.currentFamilyMember.set(object);
+  setCurrentFamilyMember(object: FamilyMember): void {
+    this.currentFamilyMember = object;
   }
 
-  resetCurrentFamilyMember():void{
-    this.currentFamilyMember.set(new FamilyMember);
+  resetCurrentFamilyMember(): void {
+    this.currentFamilyMember = new FamilyMember();
   }
 
-  setFamilyUpdateProcess(value:boolean):void{
+  setFamilyUpdateProcess(value: boolean): void {
     this.familyUpdateProcess = value;
   }
 }

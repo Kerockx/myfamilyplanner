@@ -1,0 +1,12 @@
+<div>
+
+    <div [formGroup]="form">
+        @for (obj of mainActivityFormArray.controls; track i; let i = $index) {
+        <label formArrayName="nID_mainActivity">
+            <input type="checkbox" name="mainActivity" [formControlName]="i" (change)="changeMainActivityValue($event,i)">
+            {{defMainActivities()[i].txt_name}}
+            </label>
+        }
+    </div>
+</div>
+

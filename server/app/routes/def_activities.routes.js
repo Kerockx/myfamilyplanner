@@ -1,5 +1,5 @@
 module.exports = app => {
-    const tableName = "def_family_member_type";
+    const tableName = "def_activities";
     
     console.log("../controllers/"+tableName+".controller.js");
     const controller = require("../controllers/"+tableName+".controller.js");
@@ -13,6 +13,9 @@ module.exports = app => {
   
     // Retrieve all objects
     router.get("/", controller.findAll);
+
+    // Retrieve all objects
+    router.get("/mainActivity", controller.findAllMainActivities);
   
     // Retrieve an object with id
     router.get("/:id", controller.findOne);

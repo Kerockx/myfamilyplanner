@@ -7,29 +7,21 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    nID_task_category_sub_sub: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'def_task_category_sub_sub',
-        key: 'ID'
-      }
-    },
     nID_family: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    nID_task_to_repeat: {
+    nID_activity_task: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       references: {
-        model: 'tab_tasks',
+        model: 'def_activity_tasks',
         key: 'ID'
       }
     },
     txt_name: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
     n_duration: {
       type: DataTypes.INTEGER,
@@ -58,17 +50,10 @@ module.exports = function(sequelize, DataTypes) {
         ]
       },
       {
-        name: "tab_tasks_nID_task_category_sub_sub",
+        name: "tab_task_def_activity_task",
         using: "BTREE",
         fields: [
-          { name: "nID_task_category_sub_sub" },
-        ]
-      },
-      {
-        name: "tab_tasks_nID_tab_tasks_master_tab_tasks",
-        using: "BTREE",
-        fields: [
-          { name: "nID_task_to_repeat" },
+          { name: "nID_activity_task" },
         ]
       },
     ]

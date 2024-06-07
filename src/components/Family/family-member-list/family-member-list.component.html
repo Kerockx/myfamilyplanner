@@ -1,14 +1,12 @@
 <table>
     <thead>  
-        <tr>
-            <th>Familienmitglied</th>     
+        <tr>  
             <th>Name</th>
         </tr>
     </thead>
     <tbody>
         @for (obj of objects(); track obj.ID) {
             <tr>
-                <td>{{obj.def_family_member_type.txt_name}}</td>
                 <td>{{obj.txt_name}}</td>
                 <td><button (click)="delete(obj)">Löschen</button></td>
                 <td><button (click)="setCurrentObject(obj)">Bearbeiten</button></td>       

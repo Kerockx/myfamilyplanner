@@ -1,4 +1,4 @@
 export class DefFamilyMemberType {
-    ID?:number;
+    ID!:number;
     txt_name!:string;
 }

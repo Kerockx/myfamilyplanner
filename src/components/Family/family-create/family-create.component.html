@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+    @if(settings()?.name !== false){
+    <div>
+        <input type="text" formControlName="txt_name">     
+    </div>
+    }
+    <div>
+        <button type="button" (click)="create()">Speichern</button>      
+        @if(settings()?.cancelBtn){
+            <button type="button" (click)="cancel()">Abbrechen</button>
+        }
+    </div>
+</form>

@@ -1,4 +1,21 @@
 {
+    "def_activity_Work":"Beruf",
+    "def_activity_School":"Schule",
+    "def_activity_Kindergarten":"Kindergarten",
+    "def_activity_DaycareCenter":"Kindertagesstätte",
+    "def_activity_Nanny":"Tagesmutter",
+
+    "def_activity_tasks_journey_work":"Hinfahrt zur Arbeit",
+    "def_activity_tasks_return_journey_work":"Rückfahrt von der Arbeit",
+
+    "def_family_member_type_Father":"Vater",
+    "def_family_member_type_Mother":"Mutter",
+    "def_family_member_type_Child":"Kind",
+
+
+
+
+
     "weekdays":{
         "monday":"Montag",
         "tuesday":"Dienstag",
@@ -8,6 +25,5 @@
         "saturday":"Samstag",
         "sunday":"Sonntag"
     }
-
 
 }
