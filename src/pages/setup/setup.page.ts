@@ -19,6 +19,11 @@ import { SetupFamilyAPIService } from '../../services/Family/setup-family-api.se
 import { SetupFamilyData } from '../../interfaces/setup-family-data.interface';
 import { UserService } from '../../services/User/user.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DefSetupQuestion } from '../../models/def-setup-question.model';
+import { User } from '../../models/user.model';
+import { UserStorage } from '../../config/storage.config';
+import { StorageService } from '../../services/Storage/storage.service';
+import { UserAPIService } from '../../services/User/user-api.service';
 
 
 // Klasse für die Zählung der Familienmitglieder
@@ -44,15 +49,21 @@ class FamilyMemberCount {
 export class SetupPage implements OnInit {
   // Deklaration von Variablen und Eigenschaften der Komponente
   public currentFamily: Family | undefined;
+  public currentFamilyMemberType:DefFamilyMemberType | undefined;
+  public currentSetupQuestion:DefSetupQuestion | undefined;
   public defActivityCategories: DefActivityCategory[] = [];
   public defFamilyMemberTypes: DefFamilyMemberType[] = [];
   public defMainActivities: DefActivity[] = [];
+  public defSetupQuestions:DefSetupQuestion[]=[];
   public familyForm: FormGroup;
   public familyMemberCounts: FamilyMemberCount[] = [];
   public familyMembers: FamilyMember[] = [];
-  public lastSetupState = 3;
+  public familyMemberNameForm: FormGroup;
+  public lastSetupState = 1;
   public setupFamilyData: SetupFamilyData = new SetupFamilyData();
-  public setupState = 0;
+  public setupState = 1;
+  public userFamilyMemberNameForm: FormGroup;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -60,12 +71,20 @@ export class SetupPage implements OnInit {
     private familyService: FamilyService,
     private formBuilder: FormBuilder,
     private setupFamilyAPIService: SetupFamilyAPIService,
+    private storageService:StorageService,
     private translate: TranslateService,
     private userService: UserService,
+    private userAPIService:UserAPIService
   ) {
     // Initialisierung beim Erstellen der Komponente
     this.initializeDefinitions(); // Initialisierung der Definitionen
     this.familyForm = this.formBuilder.group({ // Erstellung des Familienformulars
+      txt_name: new FormControl('', [Validators.required]), // Name des Familienformulars
+    });
+    this.userFamilyMemberNameForm = this.formBuilder.group({ // Erstellung des Familienformulars
+      txt_name: new FormControl('', [Validators.required]), // Name des Familienformulars
+    });
+    this.familyMemberNameForm = this.formBuilder.group({ // Erstellung des Familienformulars
       txt_name: new FormControl('', [Validators.required]), // Name des Familienformulars
     });
     this.initializeFamilyMemberCounts(); // Initialisierung der Zählung der Familienmitglieder
@@ -87,6 +106,11 @@ export class SetupPage implements OnInit {
     this.defActivityCategories = await firstValueFrom(this.defService.getAllDefActivityCategories(this.activatedRoute));
     // Initialisiere Hauptaktivitäten aus dem Service und erhalte eine Promise
     this.defMainActivities = await firstValueFrom(this.defService.getAllDefMainActivities(this.activatedRoute));
+    // Initialisiere Setup Questions aus dem Service und erhalte eine Promise
+    this.defSetupQuestions = await firstValueFrom(this.defService.getAllDefSetupQuestions(this.activatedRoute));
+    // Setze die aktuelle Setup Question
+    this.setCurrentSetupQuestion(this.setupState);
+    this.lastSetupState = this.defSetupQuestions.length;
     // Initialisiere den aktuellen Benutzer aus dem Snapshot
     this.setupFamilyData.user = this.userService.getCurrentUserFromSnapshot(this.activatedRoute);
   }
@@ -94,7 +118,7 @@ export class SetupPage implements OnInit {
   // Methode zum Initialisieren der Zählung der Familienmitglieder-Typen
   // Eingabe: Keine
   // Ausgabe: Keine
-  private initializeFamilyMemberCounts() {
+  public initializeFamilyMemberCounts() {
     // Iteriere durch die Familienmitglieder-Typen und initialisiere die Zählung für jeden Typ
     this.defFamilyMemberTypes.forEach((type: DefFamilyMemberType) => {
       if (type.ID) {
@@ -109,17 +133,43 @@ export class SetupPage implements OnInit {
   setSetupState(value: number) {
     // Festlegen des Setup-Zustands basierend auf den übergebenen Werten
     // und Überprüfung auf Gültigkeit des Familienformulars
-    if (this.setupState === 0 && value === 1 && this.familyForm.valid) {
+    if (this.setupState === 1 && this.familyForm.valid) {
       this.setupFamilyData.family = this.familyForm.value;
-      this.setupState += value;
-    } else {
-      this.setupState += value;
+      this.setupState = value;
+    } else if(this.setupState!==1){
+      this.setupState = value;
     }
 
+    this.setCurrentSetupQuestion(this.setupState);
+   
     // Starte die Setup-Familienlogik, wenn der letzte Schritt erreicht ist
     if (this.setupState === this.lastSetupState) {
       this.SetupFamily();
     }
+  }
+
+  getNextSetupState():number{
+    return this.setupState+1;
+  }
+
+  getPreviousSetupState():number{
+    return this.setupState-1;
+  }
+
+  // Methode zum Festlegen der Setup-Question
+  // Eingabe: value - Wert der setup_state Eigenschaft der SetupQuestion
+  // Ausgabe: Keine
+  setCurrentSetupQuestion(value:number) {
+    this.currentSetupQuestion = this.defSetupQuestions.find(
+      (obj) => obj.n_setup_state === value
+    )
+  }
+
+  // Methode zum Festlegen des aktuellen FamilyMember Types
+  // Eingabe: value - Wert der setup_state Eigenschaft der SetupQuestion
+  // Ausgabe: Keine
+  setCurrentFamilyMemberType(value:DefFamilyMemberType) {
+    this.currentFamilyMemberType = value;
   }
 
   // Methode zum Hinzufügen einer Familie zum Setup
@@ -130,28 +180,49 @@ export class SetupPage implements OnInit {
     this.setupFamilyData.family = this.familyForm.value;
   }
 
-  // Methode zum Hinzufügen eines
+  SetUserFamilyMember(type: DefFamilyMemberType){
+    this.AddFamilyMember(type,true);
+    this.setSetupState(this.getNextSetupState());
+  }
+
+  SetUserFamilyMemberName(){
+    if (this.userFamilyMemberNameForm.valid) {
+      this.setupFamilyData.familyMemberData[0].familyMember.txt_name = this.userFamilyMemberNameForm.controls['txt_name'].value;
+      this.setSetupState(this.getNextSetupState());
+    }
+  }
+
+
 
   // Methode zum Hinzufügen eines Familienmitglieds basierend auf dem Familienmitgliedstyp
   // Eingabe: type - Der Typ des Familienmitglieds, das hinzugefügt werden soll
   // Ausgabe: Keine
-  AddFamilyMember(type: DefFamilyMemberType): void {
+  AddFamilyMember(type: DefFamilyMemberType,isUser?:boolean): void {
     // Familienmitglied erstellen
     let familyMember = new FamilyMember();
     familyMember.nID_def_family_member_type = type.ID;
-    let count = this.GetFamilyMemberTypeCount(type);
-
+    familyMember.txt_name = this.familyMemberNameForm.controls['txt_name'].value;
+   
     // Setze den Namen des Familienmitglieds basierend auf der Anzahl ähnlicher Mitglieder
+    /*
+     let count = this.GetFamilyMemberTypeCount(type);
     familyMember.txt_name = count > 0 
       ? `${this.translate.instant(type.txt_name)} ${count + 1}` 
       : `${this.translate.instant(type.txt_name)}`;
+    */
+    if(isUser) {
+      familyMember.nID_user = this.setupFamilyData.user.ID;
+    }
 
     let familyMemberData: FamilyMemberData = { familyMember };
     this.setupFamilyData.familyMemberData.push(familyMemberData);
+    
     this.setupFamilyData.familyMemberData.sort(
       (a, b) => a.familyMember.nID_def_family_member_type - b.familyMember.nID_def_family_member_type
     );
     this.updateFamilyMemberCount(type.ID, 1); // Zähle das hinzugefügte Familienmitglied
+    this.familyMemberNameForm.reset();
+    this.currentFamilyMemberType = undefined;
   }
 
   // Methode zum Abrufen der Anzahl von Familienmitgliedern eines bestimmten Typs
@@ -166,16 +237,19 @@ export class SetupPage implements OnInit {
   // Methode zum Entfernen eines Familienmitglieds eines bestimmten Typs
   // Eingabe: type - Der Typ des Familienmitglieds, das entfernt werden soll
   // Ausgabe: Keine
-  RemoveFamilyMember(type: DefFamilyMemberType): void {
+  RemoveFamilyMember(value: number): void {
+    this.setupFamilyData.familyMemberData.splice(value, 1);
+    /*
     if (type.ID) {
       let index = this.setupFamilyData.familyMemberData
         .map((obj) => obj.familyMember.nID_def_family_member_type)
         .lastIndexOf(type.ID); // Finde den Index des zu entfernenden Familienmitglieds
-      if (index !== -1) {
+      if (index !== -1 && !this.setupFamilyData.familyMemberData[index].familyMember.nID_user) {
         this.setupFamilyData.familyMemberData.splice(index, 1); // Entferne das Familienmitglied aus der Liste
         this.updateFamilyMemberCount(type.ID, -1); // Aktualisiere die Zählung der Familienmitglieder
       }
     }
+      */
   }
 
   // Methode zum Aktualisieren der Zählung von Familienmitgliedern eines bestimmten Typs
@@ -209,6 +283,14 @@ export class SetupPage implements OnInit {
     this.setupFamilyAPIService.setupFamily(this.setupFamilyData).subscribe({
       next: (data) => {
         this.familyService.currentFamily = data; // Setze die aktuelle Familie im FamilyService
+        if(this.userService.user){
+          this.userAPIService.getUser(this.setupFamilyData.user.ID).subscribe({
+            next: (data) => {
+              this.storageService.set(UserStorage.CURRENT_USER, data); 
+            },
+            error: (e) => console.error(e), // Behandlung von Fehlern
+          });
+        }
       },
       error: (e) => console.error(e), // Behandlung von Fehlern
     });

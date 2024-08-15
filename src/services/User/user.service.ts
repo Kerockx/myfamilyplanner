@@ -13,6 +13,14 @@ export class UserService {
 
   constructor(private storageService: StorageService, private route: ActivatedRoute) { }
 
+  private _user: User | undefined;
+  public get user(): User | undefined {
+    return this._user;
+  }
+  public set user(value: User) {
+    this._user = value;
+  }
+
   getCurrentUserFromStorage(): Observable<User> {
     return this.storageService.get(UserStorage.CURRENT_USER);
   }
@@ -26,4 +34,18 @@ export class UserService {
       map(user => user.ID!)
     );
   }
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
 }

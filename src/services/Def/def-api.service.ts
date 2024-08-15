@@ -6,6 +6,7 @@ import { DefTaskRepeat } from '../../models/def-task-repeat.model';
 import { DefFamilyMemberType } from '../../models/def-family-member-type.model';
 import { DefActivity } from '../../models/def-activity.model';
 import { DefActivityCategory } from '../../models/def-activity-category.model';
+import { DefSetupQuestion } from '../../models/def-setup-question.model';
 
 const DEF_TASK_REPEAT_API = 'def_task_repeat'
 const DEF_TASK_REPEAT_BASE_URL = `${server.URL}/api/${DEF_TASK_REPEAT_API}`;
@@ -18,6 +19,9 @@ const DEF_ACTIVITIES_API_BASE_URL = `${server.URL}/api/${DEF_ACTIVITIES_API}`;
 
 const DEF_ACTIVITY_API_CATEGORIES = 'def_activity_categories'
 const DEF_ACTIVITY_CATEGORIES_API_BASE_URL = `${server.URL}/api/${DEF_ACTIVITY_API_CATEGORIES}`;
+
+const DEF_SETUP_QUESTIONS_API = 'def_setup_questions'
+const dEF_SETUP_QUESTIONS_API_BASE_URL = `${server.URL}/api/${DEF_SETUP_QUESTIONS_API}`;
 
 @Injectable({
   providedIn: 'root'
@@ -67,6 +71,16 @@ export class DefAPIService {
   }
   getAllDefMainActivityCategories(): Observable<DefActivityCategory[]> {
     return this.http.get<DefActivityCategory[]>(`${DEF_ACTIVITY_CATEGORIES_API_BASE_URL}/mainActivity`);
+  }
+  /*----------------------------------------------------------------
+  Def_Setup_Question API
+  ----------------------------------------------------------------*/
+  getAllDefSetupQuestions(): Observable<DefSetupQuestion[]> {
+    return this.http.get<DefSetupQuestion[]>(dEF_SETUP_QUESTIONS_API_BASE_URL);
+  }
+  getDefSetupQuestion(value: DefSetupQuestion): Observable<DefSetupQuestion> {
+    const ID = value.ID;
+    return this.http.get<DefSetupQuestion>(`${dEF_SETUP_QUESTIONS_API_BASE_URL}/${ID}`);
   }
   
 }

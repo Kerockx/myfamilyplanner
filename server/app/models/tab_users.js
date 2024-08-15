@@ -18,6 +18,14 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    nID_current_family: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'tab_familys',
+        key: 'ID'
+      }
     }
   }, {
     sequelize,
@@ -30,6 +38,13 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "ID" },
+        ]
+      },
+      {
+        name: "tab_users_tab_familys",
+        using: "BTREE",
+        fields: [
+          { name: "nID_current_family" },
         ]
       },
     ]

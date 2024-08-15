@@ -1,20 +1,23 @@
 {
-    "def_activity_Work":"Beruf",
-    "def_activity_School":"Schule",
-    "def_activity_Kindergarten":"Kindergarten",
-    "def_activity_DaycareCenter":"Kindertagesstätte",
-    "def_activity_Nanny":"Tagesmutter",
+    "def_activities_Work":"Beruf",
+    "def_activities_School":"Schule",
+    "def_activities_Kindergarten":"Kindergarten",
+    "def_activities_DaycareCenter":"Kindertagesstätte",
+    "def_activities_Nanny":"Tagesmutter",
 
     "def_activity_tasks_journey_work":"Hinfahrt zur Arbeit",
     "def_activity_tasks_return_journey_work":"Rückfahrt von der Arbeit",
 
-    "def_family_member_type_Father":"Vater",
-    "def_family_member_type_Mother":"Mutter",
-    "def_family_member_type_Child":"Kind",
-
-
-
-
+    "def_family_member_types_Father":"Vater",
+    "def_family_member_types_Mother":"Mutter",
+    "def_family_member_types_Child":"Kind",
+    
+    "def_setup_questions_family_name":"Wie heißt deine Famile",
+    "def_setup_questions_user_family_member_type":"Du bist",
+    "def_setup_questions_user_family_member_name":"Wie heißt du",
+    "def_setup_questions_family_member_selection":"Wer gehört alles zu deiner Famile",
+    "def_setup_questions_family_member_names":"Wie heißen deine Familienmitglieder",
+    "def_setup_questions_family_member_main_activies":"Was macht",
 
     "weekdays":{
         "monday":"Montag",
@@ -24,6 +27,9 @@
         "friday":"Freitag",
         "saturday":"Samstag",
         "sunday":"Sonntag"
-    }
+    },
+
+    "you":"Du",
+    "bist":"asd"
 
 }

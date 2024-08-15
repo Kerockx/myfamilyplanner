@@ -8,7 +8,7 @@ import { inject } from '@angular/core';
 import { AuthService } from '../services/Auth/auth.service';
 import { SetupPage } from '../pages/setup/setup.page';
 import { DefFamilyMemberType } from '../models/def-family-member-type.model';
-import { defActivityCategoryResolver, defActivityResolver, defFamilyMemberResolver, userResolver } from '../resolver/app-init.resolver';
+import { defActivityCategoryResolver, defActivityResolver, defFamilyMemberResolver, defSetupQuestionResolver, userResolver } from '../resolver/app-init.resolver';
 import { FamilyStorage } from '../config/storage.config';
 
 
@@ -31,6 +31,7 @@ export const routes: Routes = [
             DEF_FAMILY_MEMBER_TYPES:defFamilyMemberResolver,
             DEF_ACTIVITIES:defActivityResolver,
             DEF_ACTIVITY_CATEGORIES:defActivityCategoryResolver,
+            DEF_SETUP_QUESTIONS:defSetupQuestionResolver,
             CURRENT_USER:userResolver
         }
     },

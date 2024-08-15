@@ -65,6 +65,10 @@ export class FamilyAPIService {
     const ID = value.ID;
     return this.http.get<FamilyMember[]>(`${familyMemberBaseUrl}/family/${ID}`);
   }
+  getAllFamilysByUser(value:User): Observable<Family[]> {
+    const ID = value.ID;
+    return this.http.get<Family[]>(`${familyMemberBaseUrl}/userfamilys/${ID}`);
+  }
   getFamilyMember(value: FamilyMember): Observable<FamilyMember> {
     const ID = value.ID;
     return this.http.get<FamilyMember>(`${familyMemberBaseUrl}/${ID}`);

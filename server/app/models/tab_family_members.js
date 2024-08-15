@@ -26,6 +26,14 @@ module.exports = function(sequelize, DataTypes) {
     txt_name: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    nID_user: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'tab_users',
+        key: 'ID'
+      }
     }
   }, {
     sequelize,
@@ -52,6 +60,13 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "nID_def_family_member_type" },
+        ]
+      },
+      {
+        name: "tab_family_members_tab_users",
+        using: "BTREE",
+        fields: [
+          { name: "nID_user" },
         ]
       },
     ]

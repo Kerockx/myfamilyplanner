@@ -7,6 +7,8 @@ import { DefActivity } from '../../models/def-activity.model';
 import { DefActivityCategory } from '../../models/def-activity-category.model';
 import { DEF_ACTIVITY_CATEGORIES } from '../../config/database.config';
 import { Observable, map, of } from 'rxjs';
+import { DefSetupQuestion } from '../../models/def-setup-question.model';
+import { Family } from '../../models/family.model';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +41,30 @@ export class DefService {
     this._defActivityCategories = value;
   }
 
+  private _defSetupQuestions: DefSetupQuestion[] | undefined;
+  public get defSetupQuestions(): DefSetupQuestion[] | undefined {
+    return this._defSetupQuestions;
+  }
+  public set defSetupQuestions(value: DefSetupQuestion[]) {
+    this._defSetupQuestions = value;
+  }
+
+  private _userFamilys: Family[] | undefined;
+  public get userFamilys(): Family[] | undefined {
+    return this._userFamilys;
+  }
+  public set userFamilys(value: Family[]) {
+    this._userFamilys = value;
+  }
+
+  private _currentUserFamily: Family | undefined;
+  public get currentUserFamily(): Family | undefined {
+    return this.currentUserFamily;
+  }
+  public set currentUserFamily(value: Family) {
+    this._currentUserFamily = value;
+  }
+
   getAllDefFamilyMemberTypes(route:ActivatedRoute): Observable<DefFamilyMemberType[]> {
     return of(route.snapshot.data[FamilyStorage.DEF_FAMILY_MEMBER_TYPES] as DefFamilyMemberType[]);
   }
@@ -56,6 +82,9 @@ export class DefService {
     .pipe(
         map((activities: DefActivity[]) => activities.filter(activity => activity.nID_activity_category === DEF_ACTIVITY_CATEGORIES.MAIN_ACTIVITIES_ID))
     );
-   
+  }
+
+  getAllDefSetupQuestions(route:ActivatedRoute): Observable<DefSetupQuestion[]> {
+    return of(route.snapshot.data[DefStorage.DEF_SETUP_QUESTIONS] as DefSetupQuestion[]);
   }
 }

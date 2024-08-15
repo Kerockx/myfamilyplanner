@@ -1,9 +1,9 @@
 {
   "SERVER_PORT": 8001,
   "SERVER_HOST": "127.0.0.1",
-  "DB_HOST": "85.215.133.71",
+  "DB_HOST": "myfamilyplanner.de",
   "DB_USER": "myfamilyplanner-app",
-  "DB_PASSWORD": "MFP19671!u",
+  "DB_PASSWORD": "MFPHereIamDude1!",
   "DB": "myfamilyplanner",
   "DB_DIALECT": "mysql",
   "DB_POOL": {

@@ -4,6 +4,7 @@ var _def_activity_categories = require("./def_activity_categories");
 var _def_activity_tasks = require("./def_activity_tasks");
 var _def_daytimes = require("./def_daytimes");
 var _def_family_member_types = require("./def_family_member_types");
+var _def_setup_questions = require("./def_setup_questions");
 var _def_task_category = require("./def_task_category");
 var _def_task_category_sub = require("./def_task_category_sub");
 var _def_task_category_sub_sub = require("./def_task_category_sub_sub");
@@ -26,6 +27,7 @@ function initModels(sequelize) {
   var def_activity_tasks = _def_activity_tasks(sequelize, DataTypes);
   var def_daytimes = _def_daytimes(sequelize, DataTypes);
   var def_family_member_types = _def_family_member_types(sequelize, DataTypes);
+  var def_setup_questions = _def_setup_questions(sequelize, DataTypes);
   var def_task_category = _def_task_category(sequelize, DataTypes);
   var def_task_category_sub = _def_task_category_sub(sequelize, DataTypes);
   var def_task_category_sub_sub = _def_task_category_sub_sub(sequelize, DataTypes);
@@ -64,10 +66,14 @@ function initModels(sequelize) {
   tab_familys.hasMany(tabZ_tab_users_tab_familys, { as: "tabZ_tab_users_tab_families", foreignKey: "nID_family"});
   tab_family_members.belongsTo(tab_familys, { as: "nID_family_tab_family", foreignKey: "nID_family"});
   tab_familys.hasMany(tab_family_members, { as: "tab_family_members", foreignKey: "nID_family"});
+  tab_users.belongsTo(tab_familys, { as: "nID_current_family_tab_family", foreignKey: "nID_current_family"});
+  tab_familys.hasMany(tab_users, { as: "tab_users", foreignKey: "nID_current_family"});
   tabZ_tab_tasks_tab_family_members.belongsTo(tab_tasks, { as: "nID_task_tab_task", foreignKey: "nID_task"});
   tab_tasks.hasMany(tabZ_tab_tasks_tab_family_members, { as: "tabZ_tab_tasks_tab_family_members", foreignKey: "nID_task"});
   tabZ_tab_users_tab_familys.belongsTo(tab_users, { as: "nID_user_tab_user", foreignKey: "nID_user"});
   tab_users.hasMany(tabZ_tab_users_tab_familys, { as: "tabZ_tab_users_tab_families", foreignKey: "nID_user"});
+  tab_family_members.belongsTo(tab_users, { as: "nID_user_tab_user", foreignKey: "nID_user"});
+  tab_users.hasMany(tab_family_members, { as: "tab_family_members", foreignKey: "nID_user"});
 
   return {
     def_activities,
@@ -75,6 +81,7 @@ function initModels(sequelize) {
     def_activity_tasks,
     def_daytimes,
     def_family_member_types,
+    def_setup_questions,
     def_task_category,
     def_task_category_sub,
     def_task_category_sub_sub,

@@ -2,12 +2,14 @@ import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/Auth/auth.service';
+import { FirebaseLoginComponent } from '../../components/login/firebase-login/firebase-login.component';
+
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, FirebaseLoginComponent ],
   templateUrl: './login.page.html',
   styleUrl: './login.page.scss'
 })

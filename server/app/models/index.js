@@ -27,6 +27,7 @@ db.def_task_category = require('./def_task_category.js')(sequelize, Sequelize);
 db.def_task_category_sub = require('./def_task_category_sub.js')(sequelize, Sequelize);
 db.def_task_category_sub_sub = require('./def_task_category_sub_sub.js')(sequelize, Sequelize);
 db.def_task_repeat = require('./def_task_repeat.js')(sequelize, Sequelize);
+db.def_setup_questions = require('./def_setup_questions.js')(sequelize, Sequelize);
 db.def_weekdy = require('./def_weekday.js')(sequelize, Sequelize);
 db.tab_familys = require('./tab_familys.js')(sequelize, Sequelize);
 db.tab_family_members = require('./tab_family_members.js')(sequelize, Sequelize);

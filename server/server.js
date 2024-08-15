@@ -52,6 +52,7 @@ require("./app/routes/def_task_category.routes")(app);
 require("./app/routes/def_task_category_sub.routes")(app);
 require("./app/routes/def_task_category_sub_sub.routes")(app);
 require("./app/routes/def_task_repeat.routes")(app);
+require("./app/routes/def_setup_questions.routes")(app);
 require("./app/routes/def_weekday.routes")(app);
 require("./app/routes/tab_familys.routes")(app);
 require("./app/routes/tab_family_members.routes")(app);
@@ -61,14 +62,15 @@ require("./app/routes/setup_family.routes")(app);
 
 
 const fs = require('fs');
+
 const configFile = fs.readFileSync('./config.json');
 const config = JSON.parse(configFile);
 
 const PORT = config.SERVER_PORT;
 const HOST = config.SERVER_HOST;
+
+
+
 app.listen(PORT, HOST, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
-
-
-

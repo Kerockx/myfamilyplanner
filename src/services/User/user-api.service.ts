@@ -22,8 +22,7 @@ export class UserAPIService {
   getAllUser(): Observable<User[]> {
     return this.http.get<User[]>(userBaseUrl);
   }
-  getUser(value: User): Observable<User> {
-    const ID = value.ID;
+  getUser(ID: any): Observable<User> {
     return this.http.get<User>(`${userBaseUrl}/${ID}`);
   }
   createUser(data: User): Observable<User> {

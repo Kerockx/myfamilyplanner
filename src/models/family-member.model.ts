@@ -6,4 +6,5 @@ export class FamilyMember {
     nID_family!:number;
     nID_def_family_member_type!:number;
     txt_name!:string;
+    nID_user?:number;
 }

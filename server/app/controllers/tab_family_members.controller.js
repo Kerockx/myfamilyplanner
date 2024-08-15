@@ -49,6 +49,25 @@ exports.findAllByFamily = (req, res) => {
     });
 };
 
+// Retrieve all Objects from the database.
+exports.findAllFamilysByUser = (req, res) => {
+  const ID = req.params.id;
+  console.log(ID);
+  TABLE.findAll({
+    where:{nID_user:ID},
+    include:[{ model: db.tab_familys},]
+  })
+    .then(data => {
+      res.send(data.map(item => item.tab_family));
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving objects."
+      });
+    });
+};
+
 // Find a single Object with an id
 exports.findOne = (req, res) => {
   const pk = req.params.id;

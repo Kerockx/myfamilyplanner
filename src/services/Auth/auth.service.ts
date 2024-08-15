@@ -38,7 +38,7 @@ export class AuthService {
 
   async loginUser(data: any) {
     const decodedToken = this.jwtHelper.decodeToken(data.token);
-    const user = await firstValueFrom(this.userAPIService.getUser(decodedToken));
+    const user = await firstValueFrom(this.userAPIService.getUser(decodedToken.ID));
     await this.storageService.set(JWTStorage.JWT_TOKEN, data.token);  
     await this.storageService.set(UserStorage.CURRENT_USER, user); 
     const isValidToken = await this.isTokenValid();

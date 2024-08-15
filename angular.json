@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FamilyPlanner": {
+    "familyplanner": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FamilyPlanner:build:production"
+              "buildTarget": "familyplanner:build:production"
             },
             "development": {
-              "buildTarget": "FamilyPlanner:build:development"
+              "buildTarget": "familyplanner:build:development"
             }
           },
           "defaultConfiguration": "development"

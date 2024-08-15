@@ -34,7 +34,10 @@ exports.findAll = (req, res) => {
 // Find a single Object with an id
 exports.findOne = (req, res) => {
   const pk = req.params.id;
-  TABLE.findByPk(pk,{attributes: {exclude: ['password','email']}})
+  TABLE.findByPk(pk,{
+    attributes: {exclude: ['password','email']},
+    include:[{ model: db.tab_familys}]
+  })
     .then(data => {
       if (data) {
         res.send(data);

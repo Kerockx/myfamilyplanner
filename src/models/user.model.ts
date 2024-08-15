@@ -1,5 +1,8 @@
+import { Family } from "./family.model";
+
 export class User {
-    ID?:number;
+    ID?:any;
     txt_name!:string;
     email!:string;
+    tab_family?:Family;
 }

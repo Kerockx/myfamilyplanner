@@ -17,6 +17,9 @@ module.exports = app => {
     // Retrieve all objects
     router.get("/family/:id", controller.findAllByFamily);
   
+    // Retrieve all objects
+    router.get("/userfamilys/:id", controller.findAllFamilysByUser);
+
     // Retrieve an object with id
     router.get("/:id", controller.findOne);
 

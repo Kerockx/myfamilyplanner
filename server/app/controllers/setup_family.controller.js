@@ -11,7 +11,7 @@ exports.setupFamily = async (req, res) => {
     const FAMILY_ID = FAMILY.ID; // Speichert die ID der neu erstellten Familie
     // Verknüpft den Benutzer mit der Familie in der Tabelle 'tabZ_tab_users_tab_familys'
     await db.tabZ_tab_users_tab_familys.create({ nID_user: data.user.ID, nID_family: FAMILY_ID }, { transaction });
-
+    await db.tab_users.update({nID_current_family:FAMILY_ID},{where:{ID:data.user.ID},transaction});
     // Erstellt ein Array von Promises für die Verarbeitung der Familiendaten
     const familyMemberPromises = data.familyMemberData.map(async (obj) => {
       const familyMember = obj.familyMember; // Holt die Familiendaten

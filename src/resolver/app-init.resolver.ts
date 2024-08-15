@@ -11,6 +11,7 @@ import { UserService } from "../services/User/user.service";
 import { firstValueFrom } from "rxjs";
 import { User } from "../models/user.model";
 import { DefActivityCategory } from "../models/def-activity-category.model";
+import { DefSetupQuestion } from "../models/def-setup-question.model";
 
       
 
@@ -26,6 +27,14 @@ export const defActivityResolver: ResolveFn<DefActivity[]> = async(
   state: RouterStateSnapshot,
 ) => {
     const obj= await firstValueFrom(inject(DefAPIService).getAllDefActivities());
+    return obj;
+};
+
+export const defSetupQuestionResolver: ResolveFn<DefSetupQuestion[]> = async(
+  route: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot,
+) => {
+    const obj= await firstValueFrom(inject(DefAPIService).getAllDefSetupQuestions());
     return obj;
 };
 
